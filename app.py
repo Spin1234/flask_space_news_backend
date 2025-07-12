@@ -41,7 +41,7 @@ def get_articles():
     for article in articles:
             article["_id"] = str(article["_id"])
 
-    return jsonify(articles)
+    return jsonify(articles[::-1])
 
 @app.route('/get_article/<slug>')
 def get_article(slug):
